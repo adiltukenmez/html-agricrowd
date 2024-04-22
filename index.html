@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Agricrowd</title>
+    </head>
+    <body>
+        <h1>Agricrowd</h1>
+        <h2>Create Project</h2>
+        <label for="fundingGoalETH">Funding Goal (ETH):</label>
+        <input
+            type="text"
+            id="fundingGoalETH"
+            placeholder="Enter funding goal in ETH"
+        />
+        <label for="rewardType">Reward Type:</label>
+        <select id="rewardType">
+            <option value="products">Products</option>
+            <option value="profitShare">Profit Share</option>
+        </select>
+        <div id="profitSharePercentageInput" style="display: none">
+            <label for="profitSharePercentage">Profit Share Percentage:</label>
+            <input
+                type="number"
+                id="profitSharePercentage"
+                min="0"
+                max="100"
+                placeholder="Enter profit share percentage"
+            />
+        </div>
+        <button id="createProjectButton">Create Project</button>
+        <hr />
+        <h2>Fund Project</h2>
+        <label for="projectIdFund">Project ID:</label>
+        <input type="text" id="projectIdFund" placeholder="Enter project ID" />
+        <label for="ethAmount">Amount (ETH):</label>
+        <input type="text" id="ethAmount" placeholder="Enter amount in ETH" />
+        <button id="fundButton">Fund Project</button>
+        <hr />
+        <h2>Donate Project</h2>
+        <label for="projectIdDoante">Project ID:</label>
+        <input
+            type="text"
+            id="projectIdDonate"
+            placeholder="Enter project ID"
+        />
+        <label for="ethAmountDonate">Amount (ETH):</label>
+        <input
+            type="text"
+            id="ethAmountDonate"
+            placeholder="Enter amount in ETH"
+        />
+        <button id="donateProjectButton">Donate Project</button>
+        <hr />
+        <h2>Withdraw Funds</h2>
+        <label for="projectIdWithdraw">Project ID:</label>
+        <input
+            type="text"
+            id="projectIdWithdraw"
+            placeholder="Enter project ID"
+        />
+        <button id="withdrawFundsButton">Withdraw Funds</button>
+        <hr />
+        <h2>Get Project Details</h2>
+        <label for="projectIdDetails">Project ID:</label>
+        <input
+            type="text"
+            id="projectIdDetails"
+            placeholder="Enter project ID"
+        />
+        <button id="getProjectDetailsButton">Get Project Details</button>
+        <hr />
+        <div id="projectDetails"></div>
+        <hr />
+
+        <h2>Get Investee Projects</h2>
+        <label for="investeeAddress">Investee Address:</label>
+        <input
+            type="text"
+            id="investeeAddress"
+            placeholder="Enter investee address"
+        />
+        <button id="getInvesteeProjectsButton">Get Investee Projects</button>
+        <div id="investeeProjects"></div>
+
+        <hr />
+
+        <hr />
+        <h2>Get Total Commission</h2>
+        <button id="getTotalCommissionButton">
+            Get Total Commission Amount
+        </button>
+        <div id="totalCommissionAmount">Total Commission: N/A</div>
+
+        <hr />
+
+        <button id="connectButton">Connect to MetaMask</button>
+        <hr />
+
+        <script type="module" src="index.js"></script>
+    </body>
+</html>
